@@ -70,7 +70,7 @@ if add_selectbox=='Sentiment Analysis':
     else:
         st.line_chart(daily_sent)
 
-    st.markdown('####')
+    st.markdown('###')
     st.header('Tweet count distribution throughout a day :clock3:')
     st.markdown('####')   
 
@@ -81,7 +81,7 @@ if add_selectbox=='Sentiment Analysis':
     tweet_cnt_exp.write('Twitter users start posting as early as 4 A.M. and the count peaks between 2P.M and 3 P.M., \
     after which there is substantial drop after 5 P.M. which stagnates at night.')
 
-    st.markdown('####')
+    st.markdown('###')
     st.header('Scraped tweet data distribution :bar_chart:')
     st.markdown('####')   
     image1 = Image.open('datasets/sent_plot1.png')
@@ -91,7 +91,7 @@ if add_selectbox=='Sentiment Analysis':
     #st.pyplot(ax_month_hist.get_figure())
 
 
-    st.markdown('####')
+    st.markdown('###')
     st.header('Monthly Sentiment percentage split')
     st.markdown('####')
     #ax_perct_chart = ax_perct.plot(kind='bar', color={"Positive": "mediumseagreen", "Negative": "coral","Neutral":"tab:blue"})
@@ -103,7 +103,7 @@ if add_selectbox=='Sentiment Analysis':
     perct_splt_exp = st.beta_expander('Data insight')
     perct_splt_exp.write('December 2020 was the most positive month, September 2020 saw the highest weightage of negative sentiment')
 
-    st.markdown('####')
+    st.markdown('###')
     st.header('How did each Sentiment vary over time :question:')
     st.markdown('####')
 
