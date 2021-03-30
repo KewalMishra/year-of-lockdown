@@ -13,6 +13,9 @@ add_selectbox = st.sidebar.radio(
     ("Introduction","Sentiment Analysis", "Pandemic Analysis", "Air Traffic")
 )
 
+if add_selectbox=='Introduction':
+    st.title('Intro likhna baaki hai!')
+
 if add_selectbox=='Sentiment Analysis':
     st.title('Social Media Sentiment Analysis :speech_balloon:')
 
