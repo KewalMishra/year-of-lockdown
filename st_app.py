@@ -226,7 +226,7 @@ if add_selectbox=='Air Traffic':
         chart_data = intn
     st.area_chart(chart_data[data_type])
 
-    data_btn = st.button('Show data')
+    data_btn = st.checkbox('Show data')
     if data_btn:
         st.dataframe(chart_data)
     st.subheader('Data Metrics:')
