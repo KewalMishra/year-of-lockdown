@@ -4,7 +4,7 @@ import numpy as np
 import requests
 import time
 import pydeck as pdk
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 st.sidebar.title('Navigation')
 st.sidebar.write('Please select a page :point_down:')
