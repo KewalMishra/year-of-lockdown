@@ -45,7 +45,8 @@ if add_selectbox=='Sentiment Analysis':
         ax_perct = sent_df.groupby([sent_df['datetime'].dt.to_period('M'),sent_df['Sentiment']]).size() \
                         .groupby(level=0).apply(lambda x:100 * x / float(x.sum())).reset_index(name='percnt') \
                         .pivot("datetime", "Sentiment", "percnt")
-        senti_TS = sent_df.groupby([sent_df['datetime'].dt.to_period('M').astype(str),sent_df['Sentiment']]).size().reset_index(name='count') \
+        senti_TS = sent_df.groupby([sent_df['datetime'].dt.to_period('M').astype(str),sent_df['Sentiment']]).size() \
+                          .groupby(level=0).apply(lambda x:100 * x / float(x.sum())).reset_index(name='count') \
                                    .pivot("datetime", "Sentiment", "count")
         return sent_df, daily_sent, day_hist_values, ax_perct, senti_TS
     
