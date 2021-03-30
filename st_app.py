@@ -243,8 +243,7 @@ if add_selectbox=='Air Traffic':
     data_type = right_column.radio('Select Data',dom.columns.tolist())
     
     st.subheader('Data Metrics:')
-    st.text('1. Aircraft Movement : in Thousands (all operational airports taken together handled aircraft \
-                  movements (excluding General Aviation Movements).')
+    st.text('1. Aircraft Movement : in Thousands (all operational airports taken together handled aircraft movements excluding General Aviation Movements).')
     st.text('2. Passengers : in Millions')
     st.text('3. Freight : in Tonnes')
     
