@@ -97,7 +97,7 @@ if add_selectbox=='Sentiment Analysis':
     perct_splt_exp.write('December 2020 was the most positive month, September 2020 saw the highest weightage of negative sentiment')
 
     st.markdown('####')
-    st.header('How has each Sentiment varied over time :question:')
+    st.header('How did each Sentiment vary over time :question:')
     st.markdown('####')
 
     senti = st.selectbox('Select', senti_TS.columns.tolist())
