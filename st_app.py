@@ -249,7 +249,11 @@ if add_selectbox=='Air Traffic':
     elif agg_lvl == 'International':
         chart_data = intn
     st.area_chart(chart_data[data_type])
-
+    
+    AT_exp = st.beta_expander('Data insight')
+    AT_exp.write('As is evident from the graph, Passenger traffic has taken the biggest hit, and only Freight transport has been able to reinstate \
+                    itself to "pre-lockdown" condition.')
+    
     data_btn = st.checkbox('Show data')
     if data_btn:
         st.dataframe(chart_data)
