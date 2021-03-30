@@ -21,18 +21,18 @@ if add_selectbox=='Sentiment Analysis':
 
     @st.cache
     def load_sentiment_data():
-        return pd.read_csv('datasets/Sentiment_scored.csv',parse_dates=['datetime'])
-
-
+        sent_df = pd.read_csv('datasets/Sentiment_scored.csv',parse_dates=['datetime'])
+        daily_sent = sent_df.groupby([sent_df['datetime'].dt.date]).mean()
+        day_hist_values = np.histogram(sent_df['datetime'].dt.hour, bins=24, range=(0,24))[0]
+        ax_perct = sent_df.groupby([sent_df['datetime'].dt.to_period('M'),sent_df['Sentiment']]).size() \
+                        .groupby(level=0).apply(lambda x:100 * x / float(x.sum())).reset_index(name='percnt') \
+                        .pivot("datetime", "Sentiment", "percnt")
+        senti_TS = sent_df.groupby([sent_df['datetime'].dt.to_period('M').astype(str),sent_df['Sentiment']]).size().reset_index(name='count') \
+                                   .pivot("datetime", "Sentiment", "count")
+        return sent_df, daily_sent, day_hist_values, ax_perct, senti_TS
+    
     data_load_state = st.text('Loading data...')
-    sent_df = load_sentiment_data()
-    daily_sent = sent_df.groupby([sent_df['datetime'].dt.date]).mean()
-    day_hist_values = np.histogram(sent_df['datetime'].dt.hour, bins=24, range=(0,24))[0]
-    ax_perct = sent_df.groupby([sent_df['datetime'].dt.to_period('M'),sent_df['Sentiment']]).size() \
-                    .groupby(level=0).apply(lambda x:100 * x / float(x.sum())).reset_index(name='percnt') \
-                    .pivot("datetime", "Sentiment", "percnt")
-    senti_TS = sent_df.groupby([sent_df['datetime'].dt.to_period('M').astype(str),sent_df['Sentiment']]).size().reset_index(name='count') \
-                               .pivot("datetime", "Sentiment", "count")
+    sent_df, daily_sent, day_hist_values, ax_perct, senti_TS = load_sentiment_data()
     data_load_state.text('')
 
 
