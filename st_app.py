@@ -241,7 +241,13 @@ if add_selectbox=='Air Traffic':
     left_column, right_column = st.beta_columns(2)
     agg_lvl = left_column.radio('Select data aggregation',['All','Domestic','International'])
     data_type = right_column.radio('Select Data',dom.columns.tolist())
-
+    
+    st.subheader('Data Metrics:')
+    st.text('1. Aircraft Movement (**in Thousands**): all operational airports taken together handled aircraft \
+                  movements (excluding General Aviation Movements).')
+    st.text('2. Passengers (**in Millions**)')
+    st.text('3. Freight (**in Tonnes**)')
+    
     if agg_lvl == 'All':    
         chart_data = dom + intn
     elif agg_lvl == 'Domestic':
@@ -257,11 +263,7 @@ if add_selectbox=='Air Traffic':
     data_btn = st.checkbox('Show data')
     if data_btn:
         st.dataframe(chart_data)
-    st.subheader('Data Metrics:')
-    st.write('1. Aircraft Movement (**in Thousands**): all operational airports taken together handled aircraft \
-                  movements (excluding General Aviation Movements).')
-    st.write('2. Passengers (**in Millions**)')
-    st.write('3. Freight (**in Tonnes**)')
+
     
         
     
