@@ -4,6 +4,7 @@ import numpy as np
 import requests
 import time
 import pydeck as pdk
+from PIL import Image
 #import matplotlib.pyplot as plt
 
 st.sidebar.title('Navigation')
@@ -82,17 +83,22 @@ if add_selectbox=='Sentiment Analysis':
     st.markdown('####')
     st.header('Scraped tweet data distribution :bar_chart:')
     st.markdown('####')   
-    ax_month_hist = pd.to_datetime(sent_df['datetime']).dt.to_period('M').astype(str).hist(figsize=(15, 6))
-    st.pyplot(ax_month_hist.get_figure())
+    image1 = Image.open('datasets/sent_plot1.png')
+    st.image(image1)
+
+    #ax_month_hist = pd.to_datetime(sent_df['datetime']).dt.to_period('M').astype(str).hist(figsize=(15, 6))
+    #st.pyplot(ax_month_hist.get_figure())
 
 
     st.markdown('####')
     st.header('Monthly Sentiment percentage split')
     st.markdown('####')
-    ax_perct_chart = ax_perct.plot(kind='bar', color={"Positive": "mediumseagreen", "Negative": "coral","Neutral":"tab:blue"})
-    patches, labels = ax_perct_chart.get_legend_handles_labels()
-    ax_perct_chart.legend(patches, labels, loc='best')
-    st.pyplot(ax_perct_chart.get_figure())
+    #ax_perct_chart = ax_perct.plot(kind='bar', color={"Positive": "mediumseagreen", "Negative": "coral","Neutral":"tab:blue"})
+    #patches, labels = ax_perct_chart.get_legend_handles_labels()
+    #ax_perct_chart.legend(patches, labels, loc='best')
+    #st.pyplot(ax_perct_chart.get_figure())
+    image2 = Image.open('datasets/sent_plot2.png')
+    st.image(image2)
     perct_splt_exp = st.beta_expander('Data insight')
     perct_splt_exp.write('December 2020 was the most positive month, September 2020 saw the highest weightage of negative sentiment')
 
