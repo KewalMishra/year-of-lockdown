@@ -14,8 +14,25 @@ add_selectbox = st.sidebar.radio(
 )
 
 if add_selectbox=='Introduction':
-    st.title('Intro likhna baaki hai!')
+    st.title('An year in Lockdown: India :flag-in:')
 
+    st.markdown("###")
+
+    st.write(':arrow_right: On 23 March 2020, the Government of India under Prime Minister Narendra Modi ordered a nationwide lockdown for 21 days, limiting movement of the entire 1.38 billion or 138 Crore population of India as a preventive measure against the COVID-19 pandemic in India.')
+    ':arrow_right: On 30 May, it was announced that lockdown restrictions were to be lifted from then onwards, while the ongoing lockdown would be further extended till 30 June for only the containment zones. Services would be resumed in a phased manner starting from 8 June. It was termed as "Unlock 1.0".'
+
+    '**This project** aims at investigating the impact of the lockdown over different aspects like: Twitter Sentiment, Virus Spread \
+                 data and the Air traffic data.'
+    'I built a twitter scraper using Python and used it to scrape Historical tweets from Twitter dating from March of \
+                2020 to March of 2021. The criteria for the tweet were that it must contain *"Lockdown" AND "India"*. Approximately 300,000 \
+                tweets were scraped from Twitter, all of these tweets were then cleaned and indexed with their polarity and sentiment value. \
+                The sentiment value of each tweet can lie anywhere betweeen the range of -1 to 1, where 1 is a positive sentiment and -1 \
+                represents negative sentiment.'
+    'The air traffic data is publically hosted by the Airport Authority of India. The data can be found here: https://www.aai.aero/en/business-opportunities/aai-traffic-news. The "Traffic News Summary" file contains a summary of all air traffic, passengers and freight \
+    for both Domestic and International airports.'
+    'The data for the Covid cases is availabke at: https://api.covid19india.org/'
+    
+    
 if add_selectbox=='Sentiment Analysis':
     st.title('Social Media Sentiment Analysis :speech_balloon:')
 
