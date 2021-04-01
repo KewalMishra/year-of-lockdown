@@ -17,6 +17,7 @@ add_selectbox = st.sidebar.radio(
 if add_selectbox=='Introduction':
     #st.sidebar.write('Author')
     #st.sidebar.write('**Kewal Mishra**')
+    st.sidebar.markdown('##')
     st.sidebar.write("Feedback/suggestion: kewalmishra555@gmail.com")
     st.sidebar.write("Github [link](https://github.com/KewalMishra/year-of-lockdown)")
     st.sidebar.write("Connect with me on [Linkedin](www.linkedin.com/in/kewal-mishra-933502143)")
