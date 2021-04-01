@@ -20,6 +20,7 @@ if add_selectbox=='Introduction':
     st.markdown("###")
 
     st.write(':arrow_right: On 23 March 2020, the Government of India under Prime Minister Narendra Modi ordered a nationwide lockdown for 21 days, limiting movement of the entire 1.38 billion or 138 Crore population of India as a preventive measure against the COVID-19 pandemic in India.')
+    ':arrow_right: On 14 April, Prime minister Narendra Modi extended the nationwide lockdown until 3 May, with a conditional relaxations after 20 April for the regions where the spread had been contained or was minimal.'
     ':arrow_right: On 30 May, it was announced that lockdown restrictions were to be lifted from then onwards, while the ongoing lockdown would be further extended till 30 June for only the containment zones. Services would be resumed in a phased manner starting from 8 June. It was termed as "Unlock 1.0".'
 
     '**This project** aims at investigating the impact of the lockdown over different aspects like: Twitter Sentiment, Virus Spread \
@@ -230,7 +231,8 @@ if add_selectbox=='Pandemic Analysis':
     
 if add_selectbox=='Air Traffic':
 
-    st.sidebar.info('Airport Authority of India publishes "Traffic news Summary" that contains great amount of information about their operations.')
+    st.sidebar.info('Airport Authority of India publishes "Traffic news Summary" that contains great amount of information about their operations. \
+                     It is a no-brainer that the transport sector took one of the biggest hits due to the lockdown.')
     
     st.title('Air Traffic Analysis :airplane:')
 
