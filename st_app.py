@@ -15,7 +15,8 @@ add_selectbox = st.sidebar.radio(
 )
 
 if add_selectbox=='Introduction':
-    
+    st.sidebar.write("Connect with me on [Linkedin](www.linkedin.com/in/kewal-mishra-933502143)")
+
     st.title('An year in Lockdown: India :flag-in:')
 
     st.markdown("###")
