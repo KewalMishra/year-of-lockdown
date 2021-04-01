@@ -35,6 +35,7 @@ if add_selectbox=='Introduction':
     
     
 if add_selectbox=='Sentiment Analysis':
+    st.sidebar.info('Tweets in India that mentioned "Lockdown" were used to assess the sentiment of social media.')
     st.title('Social Media Sentiment Analysis :speech_balloon:')
 
     @st.cache
