@@ -50,6 +50,9 @@ if add_selectbox=='Introduction':
     
     
 if add_selectbox=='Sentiment Analysis':
+    st.sidebar.markdown('#')
+    st.sidebar.markdown('#')
+    st.sidebar.markdown('#')
     st.sidebar.info('Tweets in India that mentioned "Lockdown" were used to assess the sentiment of social media. The scraper used for this project is available on my Github page.')
     st.title('Social Media Sentiment Analysis :speech_balloon:')
 
@@ -132,7 +135,9 @@ if add_selectbox=='Sentiment Analysis':
     #     senti_TS
 
 if add_selectbox=='Pandemic Analysis':
-    
+    st.sidebar.markdown('#')
+    st.sidebar.markdown('#')
+    st.sidebar.markdown('#')
     st.sidebar.info('The data used for this page is dynamic and gets updated every day!')
     
     st.title('Pandemic Analysis :mask:')
@@ -244,7 +249,9 @@ if add_selectbox=='Pandemic Analysis':
 
     
 if add_selectbox=='Air Traffic':
-
+    st.sidebar.markdown('#')
+    st.sidebar.markdown('#')
+    st.sidebar.markdown('#')
     st.sidebar.info('Airport Authority of India publishes "Traffic news Summary" that contains great amount of information about their operations. \
                      It is a no-brainer that the transport sector took one of the biggest hits due to the lockdown.')
     
