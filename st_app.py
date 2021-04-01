@@ -258,12 +258,10 @@ if add_selectbox=='Air Traffic':
     AT_exp = st.beta_expander('Data insight')
     AT_exp.write('As is evident from the graph, Passenger traffic has taken the biggest hit, and only Freight transport has been able to reinstate \
                     itself to "pre-lockdown" condition.')
-    
+    st.markdown('###')    
     data_btn = st.checkbox('Show data')
     if data_btn:
         st.dataframe(chart_data)
-
-    
         
     
 
