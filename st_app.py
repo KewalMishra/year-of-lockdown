@@ -15,6 +15,10 @@ add_selectbox = st.sidebar.radio(
 )
 
 if add_selectbox=='Introduction':
+    st.sidebar.info('Author')
+    st.sidebar.info('**Kewal Mishra**')
+    st.sidebar.write("Feedback/suggestion: kewalmishra555@gmail.com")
+    st.sidebar.write("Github [link](https://github.com/KewalMishra/year-of-lockdown)")
     st.sidebar.write("Connect with me on [Linkedin](www.linkedin.com/in/kewal-mishra-933502143)")
 
     st.title('An year in Lockdown: India :flag-in:')
@@ -32,9 +36,9 @@ if add_selectbox=='Introduction':
                 tweets were scraped from Twitter, all of these tweets were then cleaned and indexed with their polarity and sentiment value using Textblob python package. \
                 The sentiment value of each tweet can lie anywhere betweeen the range of -1 to 1, where 1 is a positive sentiment and -1 \
                 represents negative sentiment."
-    'The air traffic data is publically hosted by the Airport Authority of India. The data can be found here: https://www.aai.aero/en/business-opportunities/aai-traffic-news. The "Traffic News Summary" file contains a summary of all air traffic, passengers and freight \
+    'The air traffic data is publically hosted by the Airport Authority of India. The data can be found [here](https://www.aai.aero/en/business-opportunities/aai-traffic-news). The "Traffic News Summary" file contains a summary of all air traffic, passengers and freight \
     for both Domestic and International airports.'
-    'The data for the Covid cases is available at: https://api.covid19india.org/'
+    'The data for the Covid cases is available [here](https://api.covid19india.org/)'
     
     
 if add_selectbox=='Sentiment Analysis':
