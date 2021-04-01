@@ -24,14 +24,14 @@ if add_selectbox=='Introduction':
 
     '**This project** aims at investigating the impact of the lockdown over different aspects like: Twitter Sentiment, Virus Spread \
                  data and the Air traffic data.'
-    'I built a twitter scraper using Python and used it to scrape Historical tweets from Twitter dating from March of \
-                2020 to March of 2021. The criteria for the tweet were that it must contain *"Lockdown" AND "India"*. Approximately 300,000 \
+    "I built a twitter scraper using Python(Selenium and Twitter's Advanced Search) and used it to scrape Historical tweets from Twitter dating from March of \
+                2020 to March of 2021. The criteria for the tweet were that it must contain *'Lockdown' AND 'India'*. Approximately 300,000 \
                 tweets were scraped from Twitter, all of these tweets were then cleaned and indexed with their polarity and sentiment value. \
                 The sentiment value of each tweet can lie anywhere betweeen the range of -1 to 1, where 1 is a positive sentiment and -1 \
-                represents negative sentiment.'
+                represents negative sentiment."
     'The air traffic data is publically hosted by the Airport Authority of India. The data can be found here: https://www.aai.aero/en/business-opportunities/aai-traffic-news. The "Traffic News Summary" file contains a summary of all air traffic, passengers and freight \
     for both Domestic and International airports.'
-    'The data for the Covid cases is availabke at: https://api.covid19india.org/'
+    'The data for the Covid cases is available at: https://api.covid19india.org/'
     
     
 if add_selectbox=='Sentiment Analysis':
