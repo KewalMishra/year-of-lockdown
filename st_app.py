@@ -118,7 +118,7 @@ if add_selectbox=='Sentiment Analysis':
 
 if add_selectbox=='Pandemic Analysis':
     
-    st.sidebar.info('The data used for this page is dynamic and gets updated every day!.')
+    st.sidebar.info('The data used for this page is dynamic and gets updated every day!')
     
     st.title('Pandemic Analysis :mask:')
 
