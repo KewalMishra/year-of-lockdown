@@ -117,6 +117,9 @@ if add_selectbox=='Sentiment Analysis':
     #     senti_TS
 
 if add_selectbox=='Pandemic Analysis':
+    
+    st.sidebar.info('The data used for this page is dynamic and gets updated every day!.')
+    
     st.title('Pandemic Analysis :mask:')
 
     @st.cache
@@ -226,6 +229,9 @@ if add_selectbox=='Pandemic Analysis':
 
     
 if add_selectbox=='Air Traffic':
+
+    st.sidebar.info('Airport Authority of India publishes "Traffic news Summary" that contains great amount of information about their operations.')
+    
     st.title('Air Traffic Analysis :airplane:')
 
     @st.cache
