@@ -23,9 +23,9 @@ if add_selectbox=='Introduction':
     ':arrow_right: On 14 April, Prime minister Narendra Modi extended the nationwide lockdown until 3 May, with a conditional relaxations after 20 April for the regions where the spread had been contained or was minimal.'
     ':arrow_right: On 30 May, it was announced that lockdown restrictions were to be lifted from then onwards, while the ongoing lockdown would be further extended till 30 June for only the containment zones. Services would be resumed in a phased manner starting from 8 June. It was termed as "Unlock 1.0".'
 
-    '**This project** aims at investigating the impact of the lockdown over different aspects like: Twitter Sentiment, Virus Spread \
+    '**This project** aims at investigating the impact of the lockdown over different aspects like: Social Media Sentiment, Virus Spread \
                  data and the Air traffic data.'
-    "I built a twitter scraper using Python(Selenium and Twitter's Advanced Search) and used it to scrape Historical tweets from Twitter dating from March of \
+    "For the Social Media sentiment analysis, A twitter scraper was developed using Python(Selenium and Twitter's Advanced Search) and used it to scrape Historical tweets from Twitter dating from March of \
                 2020 to March of 2021. The criteria for the tweet were that it must contain *'Lockdown' AND 'India'*. Approximately 300,000 \
                 tweets were scraped from Twitter, all of these tweets were then cleaned and indexed with their polarity and sentiment value using Textblob python package. \
                 The sentiment value of each tweet can lie anywhere betweeen the range of -1 to 1, where 1 is a positive sentiment and -1 \
@@ -36,7 +36,7 @@ if add_selectbox=='Introduction':
     
     
 if add_selectbox=='Sentiment Analysis':
-    st.sidebar.info('Tweets in India that mentioned "Lockdown" were used to assess the sentiment of social media.')
+    st.sidebar.info('Tweets in India that mentioned "Lockdown" were used to assess the sentiment of social media. The scraper used for this project is available on my Github page.')
     st.title('Social Media Sentiment Analysis :speech_balloon:')
 
     @st.cache
