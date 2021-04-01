@@ -15,6 +15,8 @@ add_selectbox = st.sidebar.radio(
 )
 
 if add_selectbox=='Introduction':
+    
+    st.markdown("# An year in Lockdown: India ")
     st.title('An year in Lockdown: India :flag-in:')
 
     st.markdown("###")
