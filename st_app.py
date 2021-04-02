@@ -46,7 +46,7 @@ if add_selectbox=='Introduction':
                 represents negative sentiment."
     'The air traffic data is publically hosted by the Airport Authority of India. The data can be found [here](https://www.aai.aero/en/business-opportunities/aai-traffic-news). The "Traffic News Summary" file contains a summary of all air traffic, passengers and freight \
     for both Domestic and International airports.'
-    'The data for the Covid cases is available [here](https://api.covid19india.org/)'
+    'The data for the Covid cases is available [here](https://api.covid19india.org/).'
     
     
 if add_selectbox=='Sentiment Analysis':
@@ -87,7 +87,10 @@ if add_selectbox=='Sentiment Analysis':
             time.sleep(0.03) 
     else:
         st.line_chart(daily_sent)
-
+    daily_avg_sent_exp = st.bet_expander('Data insight')
+    daily_avg_sent_exp.write('The line graph is noisy but we can observe that the average sentiment goes higher(towards positive) \
+                                as the year progressed.')
+    
     st.markdown('###')
     st.header('Tweet count distribution throughout a day :clock3:')
     st.markdown('####')   
@@ -104,7 +107,9 @@ if add_selectbox=='Sentiment Analysis':
     st.markdown('####')   
     image1 = Image.open('datasets/sent_plot1.png')
     st.image(image1)
-
+    
+    tweet_dist_exp = st.bet_expander('Data insight')
+    tweet_dist_exp.write('It is a no-brainer that tweets about lockdown were at an excess during the month of april and towards the end of march.')
     #ax_month_hist = pd.to_datetime(sent_df['datetime']).dt.to_period('M').astype(str).hist(figsize=(15, 6))
     #st.pyplot(ax_month_hist.get_figure())
 
@@ -192,7 +197,11 @@ if add_selectbox=='Pandemic Analysis':
                 time.sleep(0.03)        
         else:
             st.area_chart(total_df)
-
+    
+    tim_ser_exp = st.beta_expander('Data insight')
+    tim_ser_exp.write('The graph shows that the daily count of new cases is rising again since March. Click on the expand icon on top right of graph to view it \
+                        in larger mode.')
+    
     st.markdown('###')
     st.header('State level analysis')
     st.markdown('####')
@@ -206,7 +215,9 @@ if add_selectbox=='Pandemic Analysis':
         for stt in state_select:  
             state_level_chart.add_rows(states[states.State==stt][['Date',plot_data]] \
                                        .rename(columns={'Date':'index',plot_data:stt}).set_index('index'))
-
+    
+    state_lvl_exp = st.beta_expander('Data insight')
+    state_lvl_exp.write('You can select multiple states to analyse their and compare their trend!')
     st.markdown('###')        
     st.header('Map Visualtization :earth_asia:')
     st.markdown('###')        
