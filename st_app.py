@@ -87,7 +87,7 @@ if add_selectbox=='Sentiment Analysis':
             time.sleep(0.03) 
     else:
         st.line_chart(daily_sent)
-    daily_avg_sent_exp = st.bet_expander('Data insight')
+    daily_avg_sent_exp = st.beta_expander('Data insight')
     daily_avg_sent_exp.write('The line graph is noisy but we can observe that the average sentiment goes higher(towards positive) \
                                 as the year progressed.')
     
