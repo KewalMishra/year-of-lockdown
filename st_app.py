@@ -108,7 +108,7 @@ if add_selectbox=='Sentiment Analysis':
     image1 = Image.open('datasets/sent_plot1.png')
     st.image(image1)
     
-    tweet_dist_exp = st.bet_expander('Data insight')
+    tweet_dist_exp = st.beta_expander('Data insight')
     tweet_dist_exp.write('It is a no-brainer that tweets about lockdown were at an excess during the month of april and towards the end of march.')
     #ax_month_hist = pd.to_datetime(sent_df['datetime']).dt.to_period('M').astype(str).hist(figsize=(15, 6))
     #st.pyplot(ax_month_hist.get_figure())
