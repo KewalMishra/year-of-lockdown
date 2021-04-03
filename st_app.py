@@ -19,7 +19,7 @@ if add_selectbox=='Introduction':
     #st.sidebar.write('**Kewal Mishra**')
     st.sidebar.markdown('#')
     st.sidebar.markdown('#')
-    st.sidebar.markdown('#')
+#     st.sidebar.markdown('#')
 #     st.sidebar.markdown('#')
 #     st.sidebar.markdown('#')
     st.sidebar.markdown('#')
