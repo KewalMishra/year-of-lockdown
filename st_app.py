@@ -145,20 +145,20 @@ if add_selectbox=='Pandemic Analysis':
     
     st.title('Pandemic Analysis :mask:')
 
-    @st.cache
-    def load_pandemic_data():
-        case_time_series ="https://api.covid19india.org/csv/latest/case_time_series.csv"
-        states ="https://api.covid19india.org/csv/latest/states.csv"
-        state_wise ="https://api.covid19india.org/csv/latest/state_wise.csv"
-        case_time_series = pd.read_csv(case_time_series ,parse_dates=['Date_YMD'])
-        state_wise = pd.read_csv(state_wise)
-        states = pd.read_csv(states,parse_dates=['Date'])
-        return case_time_series,states,state_wise
+#     @st.cache
+#     def load_pandemic_data():
+    case_time_series ="https://api.covid19india.org/csv/latest/case_time_series.csv"
+    states ="https://api.covid19india.org/csv/latest/states.csv"
+    state_wise ="https://api.covid19india.org/csv/latest/state_wise.csv"
+    case_time_series = pd.read_csv(case_time_series ,parse_dates=['Date_YMD'])
+    state_wise = pd.read_csv(state_wise)
+    states = pd.read_csv(states,parse_dates=['Date'])
+    #return case_time_series,states,state_wise
 
 
-    data_load_state = st.text('Loading data...')
-    case_time_series,states,state_wise = load_pandemic_data()
-    data_load_state.text('')
+#     data_load_state = st.text('Loading data...')
+#     case_time_series,states,state_wise = load_pandemic_data()
+#     data_load_state.text('')
     last_update_date = st.write('Last data update:',case_time_series.Date_YMD.max().date())
 
     state_wise = state_wise[['State', 'Confirmed', 'Recovered', 'Deaths', 'Active']]
