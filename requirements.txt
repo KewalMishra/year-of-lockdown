@@ -89,4 +89,4 @@ widgetsnbextension==3.5.1
 wincertstore==0.2
 wordcloud==1.8.1
 yarg==0.1.9
-pywin32==300
+pywin32
